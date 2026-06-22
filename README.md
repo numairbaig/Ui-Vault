@@ -2,6 +2,9 @@
 
 UiVault is a full-stack, real-time interactive component catalog and live-rendering code sandbox inspired by Uiverse. It provides a visual repository where web developers can discover, customize, live-preview, and share custom HTML, CSS, JavaScript, React, and Tailwind CSS components.
 
+<img width="953" height="404" alt="image" src="https://github.com/user-attachments/assets/26ba8429-3780-464e-85f7-af4fed18d34f" />
+
+
 
 ---
 
