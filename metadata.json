@@ -1,0 +1,6 @@
+{
+  "name": "UI Vault",
+  "description": "Ui Components Library",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
