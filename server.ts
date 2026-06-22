@@ -9,7 +9,7 @@ import { dbStore, UserDocument } from './server/store.js';
 dotenv.config();
 
 const PORT = 3000;
-const JWT_SECRET = process.env.JWT_SECRET || 'a_secret_quantum_key_aura_uiverse_19827';
+const JWT_SECRET = process.env.JWT_SECRET || 'a_secret_quantum_key_uivault_19827';
 
 const app = express();
 app.use(express.json());
@@ -368,7 +368,7 @@ app.get('/api/components', optionalAuthenticate, (req: AuthenticatedRequest, res
 app.get('/api/components/:id', optionalAuthenticate, (req: AuthenticatedRequest, res) => {
   const item = dbStore.findComponentById(req.params.id);
   if (!item) {
-    return res.status(404).json({ error: 'Uiverse sandbox component not found' });
+    return res.status(404).json({ error: 'Uivault sandbox component not found' });
   }
 
   // Check if approved
@@ -633,7 +633,7 @@ app.get('/api/admin/pending', authenticateToken, requireAdmin, (req, res) => {
 // POST Approve component
 app.post('/api/admin/components/:id/approve', authenticateToken, requireAdmin, (req, res) => {
   const comp = dbStore.updateComponent(req.params.id, { approved: true });
-  if (!comp) return res.status(404).json({ error: 'Uiverse sandbox component not found' });
+  if (!comp) return res.status(404).json({ error: 'Uivault sandbox component not found' });
   res.json({ message: 'Component successfully approved and published!', component: comp });
 });
 
@@ -688,7 +688,7 @@ async function startServer() {
   }
 
   app.listen(PORT, "0.0.0.0", () => {
-    console.log(`Uiverse Full-Stack Engine booting on port http://localhost:${PORT}`);
+    console.log(`Uivault Full-Stack Engine booting on port http://localhost:${PORT}`);
   });
 }
 
